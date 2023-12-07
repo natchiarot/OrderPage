@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="order.css">
+    <title>Order Online</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-box">
+            <h1 class="header">Place your order online:</h1>
+            <form id="orderForm">
+                <div>
+                    <div class="space-between">
+                        <label for="main">Select a main dish</label>
+                        <select name="main" id="main">
+                            <option value="null" disabled="disabled" selected="true">Choose an option</option>
+                            <option value="burger">Pit Stop Burger</option>
+                            <option value="sliders">Speedway Sliders</option>
+                            <option value="chili">Checkered Flag Chili</option>
+                            <option value="hotdog">Racing Red Hot Dog</option>
+                            <option value="wrap">Victory Lap Vegan Wrap</option>
+                            <option value="chickentenders">Thundering Chicken Tenders</option>
+                            <option value="nachos">NASCAR Nachos</option>
+                            <option value="ribs">Burnout BBQ Ribs</option>
+                            <option value="wafflefries">Winner's Waffle Fries</option>
+                        </select>
+                        <label for="specials">Specials</label>
+                        <select name="specials" id="specials">
+                            <option value="null" disabled="disabled" selected="true">Choose an option</option>
+                            <option value="fishtacos">Fast Track Fish Tacos</option>
+                            <option value="brunch">Sunday Speedway Brunch</option>
+                            <option value="nightcapshake">NASCAR Nightcap Shake</option>
+                            <option value="familyfeast">Family Fuel Up Feast</option>
+                            <option value="kidsmeal">Kid's Race Day Meal</option>
+                            <option value="chocolatebanana">Speedy Choco-Banana Bliss</option>
+                        </select>
+                    </div>
+
+                    <div class="space-between">
+                        <fieldset>
+                            <legend>Make it a meal?</legend>
+                            <div>
+                                <input type="radio" name="meal" id="mealYes" value="mealYes">
+                                <label for="mealYes">Yes</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="meal" id="mealNo" value="mealNo">
+                                <label for="mealNo">No</label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div id="mealInfo" class="hidden1">
+                        <div class="space-between">
+                            <h3 class="header">Additional meal information:</h3>
+                            <fieldset>
+                                <legend>Choose a side and drink</legend>
+                                <div>
+                                    <label for="side">Select a side</label>
+                                    <select name="side" id="side">
+                                        <option value="null" disabled="disabled" selected="true">Choose an option
+                                        </option>
+                                        <option value="salad">Chequered Ceasar Salad</option>
+                                        <option value="tatertots">Turbocharged Garlic Knots</option>
+                                        <option value="sweetpotatofries">Fuel-Injected Sweet Potato Fries</option>
+                                        <option value="">Speedway Tire Tread Onion Rings</option>
+                                        <option value="macncheese">Finish Line Mac'n'Cheese</option>
+                                    </select>
+
+                                </div>
+                                <div>
+                                    <label for="drink">Select a drink</label>
+                                    <select name="drink" id="drink">
+                                        <option value="null" disabled="disabled" selected="true">Choose an option
+                                        </option>
+                                        <option value="smoothie">Racing Refuel Smoothie</option>
+                                        <option value="shake">Speedy Grub Hub Shake</option>
+                                        <option value="cola">Nitro Cola</option>
+                                        <option value="rootbeer">Raceway Root Beer</option>
+                                        <option value="lemonade">Victory Lemonade</option>
+                                        <option value="grapesoda">G-Force Grape Soda</option>
+                                        <option value="orangecrush">High-Octane Orange Crush</option>
+                                        <option value="punch">Pit Crew Punch</option>
+                                    </select>
+                                </div>
+                        </div>
+                        </fieldset>
+                    </div>
+                    <div class="space-between">
+                        <fieldset>
+                            <legend>Add more menu items/ meals?</legend>
+                            <div>
+                                <input type="radio" name="extraMeals" id="extraMealsYes" value="extraMealsYes">
+                                <label for="extraMealsYes">Yes</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="extraMeals" id="extraMealsNo" value="extraMealsNo">
+                                <label for="extraMealsNo">No</label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div id="extraMealsInfo" class="hidden2">
+                        <div class="space-between">
+                            <label for="extraMealQuantity">Quantity:</label>
+                            <input type="number" id="extraMealQuantity" name="extraMealQuantity" min="0" max="10">
+                            <button type="button" name="submitOne" class="button-style">Enter</button>
+                        </div>
+                    </div>
+
+                    <div id="mealContainer"></div>
+
+                    <div class="space-between">
+                        <fieldset>
+                            <legend>Select dining preference</legend>
+                            <div>
+                                <input type="radio" name="diningpreference" id="dinein" value="dinein">
+                                <label for="dinein">Dine in</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="diningpreference" id="pickup" value="pickup">
+                                <label for="pickup">Pickup</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="diningpreference" id="delivery" value="delivery">
+                                <label for="delivery">Delivery</label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div id="storeCardInfo" class="hidden3">
+                        <div class="space-between">
+                            <fieldset>
+                                <legend>Select a payment method</legend>
+                                <div>
+                                    <input type="radio" name="paymethod" id="onlinepay" value="onlinepay">
+                                    <label for="onlinepay">Pay online using Credit Card</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="paymethod" id="storepay" value="storepay">
+                                    <label for="storepay">Pay in store</label>
+                                </div>
+                        </div>
+                        </fieldset>
+
+                        <div id="storeCCInfo" class="hidden4">
+                            <div class="space-between">
+                                <fieldset>
+                                    <legend>Select type of Credit Card</legend>
+                                    <div>
+                                        <input type="radio" name="cctype" id="visa" value="visa">
+                                        <label for="visa">VISA</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="cctype" id="mastercard" value="mastercard">
+                                        <label for="mastercard">Mastercard</label>
+                                    </div>
+                                    <div>
+                                        <label for="ccname">Name as it appears on card:</label>
+                                        <input type="text" id="ccname" name="ccname">
+                                    </div>
+                                    <div>
+                                        <label for="ccnumber">Credit card number:</label>
+                                        <input type="text" id="ccnumber" name="ccnumber">
+                                    </div>
+                                    <div>
+                                        <label for="ccexpdate">Expiry date:</label>
+                                        <input type="text" id="ccexpdate" name="ccexpdate">
+                                    </div>
+                                    <div>
+                                        <label for="cccvv">CVV:</label>
+                                        <input type="text" id="cccvv" name="cccvv">
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="deliveryInfo" class="hidden5">
+                        <div class="space-between">
+                            <fieldset>
+                                <legend>Please fill in the delivery information</legend>
+                                <div>
+                                    <label for="address">Street address:</label>
+                                    <input type="text" id="address" name="address">
+                                </div>
+                                <div>
+                                    <label for="city">City:</label>
+                                    <input type="text" id="city" name="city">
+                                </div>
+                                <div>
+                                    <label for="postalcode">Postal code:</label>
+                                    <input type="text" id="postalcode" name="postalcode">
+                                </div>
+                                <legend>Select type of Credit Card</legend>
+                                <div>
+                                    <input type="radio" name="cctype" id="visa" value="visa">
+                                    <label for="visa">VISA</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="cctype" id="mastercard" value="mastercard">
+                                    <label for="mastercard">Mastercard</label>
+                                </div>
+                                <div>
+                                    <label for="ccname">Name as it appears on card:</label>
+                                    <input type="text" id="ccname" name="ccname">
+                                </div>
+                                <div>
+                                    <label for="ccnumber">Credit card number:</label>
+                                    <input type="text" id="ccnumber" name="ccnumber">
+                                </div>
+                                <div>
+                                    <label for="ccexpdate">Expiry date:</label>
+                                    <input type="text" id="ccexpdate" name="ccexpdate">
+                                </div>
+                                <div>
+                                    <label for="cccvv">CVV:</label>
+                                    <input type="text" id="cccvv" name="cccvv">
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="space-between">
+                        <label for="custName">Name for the order:</label>
+                        <input type="text" id="custName" name="custName">
+                    </div>
+                    <button type="submit" name="submitTwo" class="button-style">Submit Order</button>
+                    <div id="thankYou" class="hidden6">
+                        <p>Vroom, vroom! Your order has crossed the finish line and is now in the pit stop for
+                            preparation!</p>
+                    </div>
+            </form>
+        </div>
+    </div>
+    <script src="order.js"></script>
+</body>
+
+</html>

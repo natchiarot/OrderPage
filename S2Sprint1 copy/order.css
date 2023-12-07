@@ -1,0 +1,56 @@
+.hidden1,
+.hidden2,
+.hidden3,
+.hidden4,
+.hidden5,
+.hidden6,
+.hidden7,
+.hidden8,
+.hidden9,
+.hidden10 {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+body {
+  background-image: url(Images/race\ track\ diner\ outside.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+.header {
+  color: red;
+}
+
+.button-style {
+  background-color: red;
+  box-shadow: 0 5px 0 rgb(179, 12, 12);
+  border-radius: 8px;
+  border: none;
+  color: white;
+  height: 1.5em;
+  font-weight: bold;
+}
+
+.button-style:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.space-between {
+  margin: 1em;
+}
+
+.main-box {
+  background-color: rgba(0, 0, 0, 0.792);
+  color: white;
+  padding: 2em;
+  margin: 1em;
+  font-size: large;
+}
